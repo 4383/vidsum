@@ -220,7 +220,7 @@ def download_video_srt(subs):
     return movie_filename, subtitle_filename
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser("Watch videos quickly")
     parser.add_argument('-i', '--video-file', help="Input video file")
     parser.add_argument('-s', '--subtitles-file',
@@ -249,3 +249,7 @@ if __name__ == '__main__':
             os.remove(movie_filename)
             os.remove(subtitle_filename)
             print("[sum.py] Remove the original files")
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,5 @@
+Pipfile
+build/
+dist/
+vidsum.egg-info/
+*.pyc

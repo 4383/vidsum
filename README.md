@@ -6,39 +6,32 @@ This is the community driven approach towards the summarization by the **[OpenGe
 
 # Installing vidsum
 
-In order to install vidsum, simply clone the repository to a local directory. You can do this by running the following commands:
+In order to install vidsum: 
+- simply clone the repository to a local directory.
+- install pbr as a dependency for building the package.
+- install vidsum
+
+You can do this by running the following commands:
 ```sh
 $ git clone https://github.com/OpenGenus/vidsum.git
-
-$ cd vidsum/code
-
+$ pip install pbr
+$ python setup.py install
 ```
-Please note that vidsum requires the following packages to be installed:
-- [pysrt](https://github.com/byroot/pysrt)
-- [imageio](https://imageio.github.io/)
-- [moviepy](https://zulko.github.io/moviepy/)
-- [pytube](https://github.com/nficano/pytube)
-- [sumy](https://github.com/miso-belica/sumy)
-
-If you do not have these packages installed, then you can do so by running this command:
-```sh
-$ pip install -r requirements.txt
-
-```
+The previous command automaticaly install all requirements needed.
 
 # Usage
 
 To generate summary of a video file `sample.mp4` with subtitle file `subtitle.srt` :
 ```python
-python sum.py -i sample.mp4 -s subtitle.srt
+vidsum -i sample.mp4 -s subtitle.srt
 ```
 To summarize a YouTube video from its url:
 ```python
-python sum.py -u <url>
+vidsum -u <url>
 ```
 If you want to remain the downloaded YouTube video and subtitles:
 ```python
-python sum.py -u <url> -k
+vidsum -u <url> -k
 ```
  
 # Future developments
